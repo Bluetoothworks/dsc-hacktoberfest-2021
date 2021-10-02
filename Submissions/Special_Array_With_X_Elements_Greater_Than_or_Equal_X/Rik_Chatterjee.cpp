@@ -16,26 +16,12 @@ public:
                 ++cur;
             }
             
+            //cur : count of elements < x
+            //n-cur: count of elements >= x
+            // cout << x << " : " << n-cur << endl;
             if(n-cur == x) return x;
         }
         
         return -1;
     }
 };
-int main()
-{
-    Solution ob;
-    int n;
-    cin>>n;
-    vector<int> a;
-    for(int i=0;i<n;i++){
-        int k;
-        cin>>k;
-        a.push_back(k);
-    }
-    int l=ob.specialArray(a);
-    if(l!=-1)
-        cout<<l;
-    else    
-        cout<<"Element not found";
-}
